@@ -1,3 +1,3 @@
-if (surface_exists(surf_dark)) {
-    surface_free(surf_dark);
+if (surface_exists(dark_surf)) {
+    surface_free(dark_surf);
 }

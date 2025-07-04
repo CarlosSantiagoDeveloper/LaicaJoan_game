@@ -1,2 +1,3 @@
-light_radius = 100; // how far this light shines
-surf_dark = noone
+light_radius = 150 + random_range(-5, 5);
+ray_count = 64; // higher = smoother light edge
+dark_surf = -1;
