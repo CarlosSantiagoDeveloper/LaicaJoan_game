@@ -35,9 +35,17 @@
   },
   "name":"LaicaJoan_game",
   "resources":[
+    {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
+    {"id":{"name":"obj_light_source","path":"objects/obj_light_source/obj_light_source.yy",},},
+    {"id":{"name":"obj_light","path":"objects/obj_light/obj_light.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},
+    {"id":{"name":"Room1_1","path":"rooms/Room1_1/Room1_1.yy",},},
+    {"id":{"name":"Room1_2","path":"rooms/Room1_2/Room1_2.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"scr_light","path":"scripts/scr_light/scr_light.yy",},},
+    {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},},
+    {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
     {"id":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},},
   ],
@@ -45,6 +53,8 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"Room1_1","path":"rooms/Room1_1/Room1_1.yy",},},
+    {"roomId":{"name":"Room1_2","path":"rooms/Room1_2/Room1_2.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
