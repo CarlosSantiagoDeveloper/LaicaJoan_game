@@ -41,6 +41,7 @@
   "resources":[
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
+    {"id":{"name":"obj_gradient_light","path":"objects/obj_gradient_light/obj_gradient_light.yy",},},
     {"id":{"name":"obj_light_controller","path":"objects/obj_light_controller/obj_light_controller.yy",},},
     {"id":{"name":"obj_light_player","path":"objects/obj_light_player/obj_light_player.yy",},},
     {"id":{"name":"obj_light_source_1","path":"objects/obj_light_source_1/obj_light_source_1.yy",},},
@@ -66,9 +67,9 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"Room_Vertex","path":"rooms/Room_Vertex/Room_Vertex.yy",},},
     {"roomId":{"name":"Room_rayCast_vetex","path":"rooms/Room_rayCast_vetex/Room_rayCast_vetex.yy",},},
     {"roomId":{"name":"Room1_rayCast_vertex_real","path":"rooms/Room1_rayCast_vertex_real/Room1_rayCast_vertex_real.yy",},},
-    {"roomId":{"name":"Room_Vertex","path":"rooms/Room_Vertex/Room_Vertex.yy",},},
     {"roomId":{"name":"Room_rayCast","path":"rooms/Room_rayCast/Room_rayCast.yy",},},
   ],
   "templateType":"game",
