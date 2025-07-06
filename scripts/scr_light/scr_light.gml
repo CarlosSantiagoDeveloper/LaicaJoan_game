@@ -6,7 +6,7 @@
 /// @param _direction   Center direction in degrees (e.g. 90 = down).
 /// @param _angle       Cone angle (e.g. 90 = flashlight, 360 = full light)
 
-function lightSource(_obj, _ray_count, _direction, _angle) {
+function lightSource(_obj, _ray_count,_light_radius, _direction, _angle) {
 	
 		_ray_count = _angle/360*_ray_count
 	with (_obj) {
@@ -22,8 +22,8 @@ function lightSource(_obj, _ray_count, _direction, _angle) {
 
 	    for (var i = 0; i < _ray_count; i++) {
 	        var angle = start_angle + (i * step_angle);
-	        var test_x = origin_x + lengthdir_x(light_radius, angle);
-	        var test_y = origin_y + lengthdir_y(light_radius, angle);
+	        var test_x = origin_x + lengthdir_x(_light_radius, angle);
+	        var test_y = origin_y + lengthdir_y(_light_radius, angle);
 
 	        var result = get_collision_point(origin_x, origin_y, test_x, test_y, obj_wall);
 	        var lx = result[0];
