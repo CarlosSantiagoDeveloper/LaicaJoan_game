@@ -1,35 +1,29 @@
-// === Create surface if needed ===
-if (!surface_exists(surf)) {
-    surf = surface_create(room_width, room_height);
-}
+if (!surface_exists(global.surf_darkness)) exit;
+
 var lx = x;
 var ly = y;
 var rad = 256; // Light radius
 var tile_size = 64;
 var tilemap = layer_tilemap_get_id("walls");
-// === Set surface ===
-surface_set_target(surf);
-draw_clear_alpha(c_black, 1); // Entire room starts fully black
 
-// === Cut a circle of light where shadows will be cast ===
-gpu_set_blendmode(bm_subtract); // Subtract light circle from darkness
-draw_set_alpha(1);
+// === Subtract circular light ===
+surface_set_target(global.surf_darkness);
+
+gpu_set_blendmode(bm_subtract);
 draw_set_color(c_white);
-draw_circle(x, y, rad, false); // This creates a circular "light window"
+draw_set_alpha(1);
+draw_circle(lx, ly, rad, false); // Light circle
+
 gpu_set_blendmode(bm_normal);
 
-// === Begin drawing shadows inside the light radius ===
+// === Begin drawing shadows inside light radius ===
 vertex_begin(VBuffer, VertexFormat);
 
-
-
-// Limit tiles processed around light
 var startx = max(0, floor((lx - rad) / tile_size));
 var endx   = min(floor((lx + rad) / tile_size), tilemap_get_width(tilemap) - 1);
 var starty = max(0, floor((ly - rad) / tile_size));
 var endy   = min(floor((ly + rad) / tile_size), tilemap_get_height(tilemap) - 1);
 
-// Loop through nearby wall tiles
 for (var yy = starty; yy <= endy; yy++) {
     for (var xx = startx; xx <= endx; xx++) {
         var tile = tilemap_get(tilemap, xx, yy);
@@ -39,7 +33,6 @@ for (var yy = starty; yy <= endy; yy++) {
             var px2 = px1 + tile_size;
             var py2 = py1 + tile_size;
 
-            // Only cast shadows from edges facing the light
             if (!SignTest(px1, py1, px2, py1, lx, ly)) ProjectShadow(VBuffer, px1, py1, px2, py1, lx, ly);
             if (!SignTest(px2, py1, px2, py2, lx, ly)) ProjectShadow(VBuffer, px2, py1, px2, py2, lx, ly);
             if (!SignTest(px2, py2, px1, py2, lx, ly)) ProjectShadow(VBuffer, px2, py2, px1, py2, lx, ly);
@@ -50,15 +43,9 @@ for (var yy = starty; yy <= endy; yy++) {
 
 vertex_end(VBuffer);
 
-// Draw the shadows inside the cleared circle
+// Draw shadows
 draw_set_color(c_black);
 draw_set_alpha(1);
 vertex_submit(VBuffer, pr_trianglelist, -1);
 
-// === End surface ===
 surface_reset_target();
-
-// === Final draw ===
-if (surface_exists(surf)) {
-    draw_surface(surf, 0, 0);
-}
