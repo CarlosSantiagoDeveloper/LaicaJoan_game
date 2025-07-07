@@ -1,17 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_light_controller",
+  "%Name":"obj_light_controller__________",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":72,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":73,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_light_controller",
+  "name":"obj_light_controller__________",
   "overriddenProperties":[],
   "parent":{
     "name":"Shadow",
-    "path":"folders/Objects/Shadow.yy",
+    "path":"folders/Objects/Not Used/Shadow.yy",
   },
   "parentObjectId":null,
   "persistent":false,

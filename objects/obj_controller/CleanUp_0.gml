@@ -1,11 +1,3 @@
-// Safely delete vertex buffer
-if (global.VBuffer != -1) {
-    vertex_delete_buffer(global.VBuffer);
-    global.VBuffer = -1;
-}
-
-// Safely free light surface
-if (surface_exists(global.surf_light)) {
-    surface_free(global.surf_light);
-    global.surf_light = -1;
-}
+if (global.vb_shadow!=-1) vertex_delete_buffer(global.vb_shadow);
+if (global.vf_shadow!=-1) vertex_format_delete(global.vf_shadow);
+if (surface_exists(global.shadow_surface)) surface_free(global.shadow_surface);
