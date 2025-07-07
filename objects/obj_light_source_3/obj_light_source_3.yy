@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Third Shadows",
-    "path":"folders/Objects/Third Shadows.yy",
+    "path":"folders/Objects/Not Used/Third Shadows.yy",
   },
   "parentObjectId":null,
   "persistent":false,
