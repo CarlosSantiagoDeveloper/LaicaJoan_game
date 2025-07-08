@@ -3,7 +3,9 @@
 vertex_begin(vb,vf);
 var _vb = vb;
 with(obj_wall){
-    Quad(_vb,x,y,x+sprite_width,y+sprite_height); //Negative Slope Diagonal Wall
-    Quad(_vb,x+sprite_width,y,x,y+sprite_height); //Positive Slope Diagonal Wall
+    
+	Quad(_vb,x+sprite_width,y+sprite_height,x,y); //Negative Slope Diagonal Wall
+   Quad(_vb,x,y+sprite_height,x+sprite_width,y); //Positive Slope Diagonal Wall
+ 
 }
 vertex_end(vb);
