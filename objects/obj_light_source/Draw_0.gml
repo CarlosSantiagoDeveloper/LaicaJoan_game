@@ -1,35 +1,26 @@
-// === Create surface if needed ===
-if (!surface_exists(surf)) {
-    surf = surface_create(room_width, room_height);
-}
+if (!surface_exists(global.shadow_surface)) exit;
+
+// Light settings
 var lx = x;
 var ly = y;
-var rad = 256; // Light radius
+var rad = 256;
 var tile_size = 64;
 var tilemap = layer_tilemap_get_id("walls");
-// === Set surface ===
-surface_set_target(surf);
-draw_clear_alpha(c_black, 1); // Entire room starts fully black
-
-// === Cut a circle of light where shadows will be cast ===
-gpu_set_blendmode(bm_subtract); // Subtract light circle from darkness
-draw_set_alpha(1);
-draw_set_color(c_white);
-draw_circle(x, y, rad, false); // This creates a circular "light window"
-gpu_set_blendmode(bm_normal);
-
-// === Begin drawing shadows inside the light radius ===
-vertex_begin(VBuffer, VertexFormat);
 
 
+// === Draw the light hole (subtract from darkness) ===
+surface_set_target(global.shadow_surface);
+//draw_clear_alpha(0,0);  Maybe lo devuelvo
+			
 
-// Limit tiles processed around light
+// === Shadow projection ===
+vertex_begin(global.vb_shadow,global.vf_shadow);
+
 var startx = max(0, floor((lx - rad) / tile_size));
-var endx   = min(floor((lx + rad) / tile_size), tilemap_get_width(tilemap) - 1);
+var endx   = min(tilemap_get_width(tilemap) - 1, floor((lx + rad) / tile_size));
 var starty = max(0, floor((ly - rad) / tile_size));
-var endy   = min(floor((ly + rad) / tile_size), tilemap_get_height(tilemap) - 1);
+var endy   = min(tilemap_get_height(tilemap) - 1, floor((ly + rad) / tile_size));
 
-// Loop through nearby wall tiles
 for (var yy = starty; yy <= endy; yy++) {
     for (var xx = startx; xx <= endx; xx++) {
         var tile = tilemap_get(tilemap, xx, yy);
@@ -39,26 +30,40 @@ for (var yy = starty; yy <= endy; yy++) {
             var px2 = px1 + tile_size;
             var py2 = py1 + tile_size;
 
-            // Only cast shadows from edges facing the light
-            if (!SignTest(px1, py1, px2, py1, lx, ly)) ProjectShadow(VBuffer, px1, py1, px2, py1, lx, ly);
-            if (!SignTest(px2, py1, px2, py2, lx, ly)) ProjectShadow(VBuffer, px2, py1, px2, py2, lx, ly);
-            if (!SignTest(px2, py2, px1, py2, lx, ly)) ProjectShadow(VBuffer, px2, py2, px1, py2, lx, ly);
-            if (!SignTest(px1, py2, px1, py1, lx, ly)) ProjectShadow(VBuffer, px1, py2, px1, py1, lx, ly);
+            // Cast shadow if edge faces light
+            // Top edge: only cast if tile above is empty
+if (yy > 0 && tilemap_get(tilemap, xx, yy - 1) == 0) {
+    ProjectShadow(global.vb_shadow, px1, py1, px2, py1, lx, ly);
+}
+
+// Right edge: only cast if tile to the right is empty
+if (xx < tilemap_get_width(tilemap) - 1 && tilemap_get(tilemap, xx + 1, yy) == 0) {
+    ProjectShadow(global.vb_shadow, px2, py1, px2, py2, lx, ly);
+}
+
+// Bottom edge: only cast if tile below is empty
+if (yy < tilemap_get_height(tilemap) - 1 && tilemap_get(tilemap, xx, yy + 1) == 0) {
+    ProjectShadow(global.vb_shadow, px2, py2, px1, py2, lx, ly);
+}
+
+// Left edge: only cast if tile to the left is empty
+if (xx > 0 && tilemap_get(tilemap, xx - 1, yy) == 0) {
+    ProjectShadow(global.vb_shadow, px1, py2, px1, py1, lx, ly);
+}
         }
     }
 }
 
-vertex_end(VBuffer);
+vertex_end(global.vb_shadow);
 
-// Draw the shadows inside the cleared circle
-draw_set_color(c_black);
-draw_set_alpha(1);
-vertex_submit(VBuffer, pr_trianglelist, -1);
+//No vertex submit
 
-// === End surface ===
 surface_reset_target();
 
-// === Final draw ===
-if (surface_exists(surf)) {
-    draw_surface(surf, 0, 0);
-}
+shader_set(shader0);
+shader_set_uniform_f( LightPosRadius, x,y,rad,0.0 );
+
+draw_surface(global.shadow_surface,0,0);
+shader_reset();
+
+

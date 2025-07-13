@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_light_source_2",
+  "%Name":"obj_light",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_light_source_2",
+  "name":"obj_light",
   "overriddenProperties":[],
   "parent":{
-    "name":"Shadow",
-    "path":"folders/Objects/Not Used/Shadow.yy",
+    "name":"Multi Lights",
+    "path":"folders/Objects/Multi Lights.yy",
   },
   "parentObjectId":null,
   "persistent":false,

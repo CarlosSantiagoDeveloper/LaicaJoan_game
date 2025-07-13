@@ -10,8 +10,8 @@
   "name":"obj_light_player",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Not Used",
+    "path":"folders/Objects/Not Used.yy",
   },
   "parentObjectId":null,
   "persistent":false,
