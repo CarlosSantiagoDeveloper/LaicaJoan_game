@@ -7,4 +7,5 @@ hsp = 0
 //Light_source
 light_dir = 0;
 
+light = instance_create_layer(x,y,"Darkness",obj_light_source)
 

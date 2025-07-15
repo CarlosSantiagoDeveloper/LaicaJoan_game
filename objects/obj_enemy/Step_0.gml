@@ -1,20 +1,25 @@
-var dist_to_player = point_distance(x, y, obj_player.x, obj_player.y);
-if (dist_to_player <= 100) {
-    // I'm in the light
-    can_move = false;
-} else {
-    // I'm in the dark
-    can_move = true;
-}
+var _hidden = true; // Start assuming it's in shadow
 
-if (can_move) {
-    x += 1; // or whatever your movement is
-}
+with (obj_light) {
+    var dist = point_distance(x, y, other.x, other.y);
+    var angle = point_direction(x, y, other.x, other.y);
 
-can_see = false;
+    var steps = floor(dist / 4);
+    var blocked = false;
 
-with (obj_light_source) {
-    if (point_distance(other.x, other.y, x, y) <= light_radius) {
-        other.can_see = true;
+    for (var i = 0; i < steps; i++) {
+        var px = x + lengthdir_x(i * 4, angle);
+        var py = y + lengthdir_y(i * 4, angle);
+
+        if (instance_position(px, py, obj_wall)) {
+            blocked = true;
+            break;
+        }
+    }
+
+    // If at least one light is not blocked, the object is not in shadow
+    if (!blocked) {
+        _hidden = false;
     }
 }
+//show_debug_message(_hidden)

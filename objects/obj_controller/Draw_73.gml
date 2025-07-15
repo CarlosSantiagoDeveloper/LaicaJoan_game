@@ -1,2 +1,4 @@
-if (!surface_exists(global.surf_light)) exit;
-draw_surface(global.surf_light, 0, 0);
+
+
+// Draw shadows as black
+vertex_submit(global.vb_shadow, pr_trianglelist, -1);
