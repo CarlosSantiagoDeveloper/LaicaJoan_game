@@ -9,14 +9,17 @@ var _u_pos2 = u_pos2;
 var _u_z = u_z;
 var _u_z2 = u_z2;
 var _vb = vb;
+
 for (var i = 0; i < instance_number(obj_light); i++) {
     var l = instance_find(obj_light, i);
 
     // Draw shadow volume at depth _z
+
     shader_set(shd_shadow);
     shader_set_uniform_f(_u_pos2, l.x, l.y);
     shader_set_uniform_f(_u_z2, _z);
     vertex_submit(_vb, pr_trianglelist, -1);
+
 
     // Draw light texture at same depth
     gpu_set_blendmode(bm_add);
