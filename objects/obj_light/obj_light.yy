@@ -8,8 +8,8 @@
   "name":"obj_light",
   "overriddenProperties":[],
   "parent":{
-    "name":"Multi Lights",
-    "path":"folders/Objects/Multi Lights.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
