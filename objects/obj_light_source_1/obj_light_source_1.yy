@@ -11,8 +11,8 @@
   "name":"obj_light_source_1",
   "overriddenProperties":[],
   "parent":{
-    "name":"Not Used",
-    "path":"folders/Objects/Not Used.yy",
+    "name":"Working group shadow",
+    "path":"folders/Objects/Working group shadow.yy",
   },
   "parentObjectId":null,
   "persistent":false,
