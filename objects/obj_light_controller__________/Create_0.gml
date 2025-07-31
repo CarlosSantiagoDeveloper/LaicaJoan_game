@@ -1,1 +1,0 @@
-global.surf_darkness = -1;
