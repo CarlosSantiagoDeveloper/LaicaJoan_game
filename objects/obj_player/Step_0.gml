@@ -34,7 +34,7 @@ if (place_meeting(x, y + vsp, obj_wall)) {
 y += vsp;
 
 
-light_dir = point_direction(x, y, mouse_x, mouse_y);
+//light_dir = point_direction(x, y, mouse_x, mouse_y);
 
 light.x = x
 light.y = y
