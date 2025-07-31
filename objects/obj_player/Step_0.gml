@@ -9,7 +9,26 @@ var jump = keyboard_check_pressed(vk_space);
 hsp = move * move_speed;
 vsp += grav;
 vsp = clamp(vsp, -1000, max_fall); // limit fall speed
-
+// Infinite Room logic for X
+if (x < 2732) {
+	obj_light.on = false;
+	obj_camera.x = 5464
+    x = 5464;
+} else if (x > 5464) {
+    x = 2732;
+	obj_camera.x = 2732
+	obj_light.on = false;
+}
+// Infinite Room logic for Y
+if (y < 2304) {
+	obj_light.on = false;
+	obj_camera.y = 4608-200
+    y = 4608;
+} else if (y > 4608) {
+    y = 2304;
+	obj_camera.y = 2304-200
+	obj_light.on = false;
+}
 // === JUMPING ===
 if (place_meeting(x, y + 1, obj_wall) && jump) {
     vsp = jump_speed;

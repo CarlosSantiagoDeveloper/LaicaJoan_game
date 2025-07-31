@@ -5,7 +5,7 @@ max_fall = 8;
 vsp = 0;
 hsp = 0
 //Light_source
-light_dir = 0;
 
-light = instance_create_layer(x,y,"Darkness",obj_light_source)
+
+light = instance_create_layer(x,y,"Darkness",obj_light)
 
