@@ -6,7 +6,7 @@ surface_set_target(dark_surf);
 draw_clear_alpha(c_black, 0); // clear fully
 
 // === Full black overlay ===
-draw_set_alpha(0.3);
+draw_set_alpha(0.2);
 draw_set_color(c_black);
 draw_rectangle(0, 0, room_width, room_height, false);
 
@@ -17,7 +17,7 @@ draw_set_color(c_white); // white subtracts from black
 
 if(instance_exists(obj_light)&&obj_light.on){
 
-lightSource(obj_light,ray_count,light_radius,dir,angle)
+	lightSource(obj_light,ray_count,light_radius,dir,angle)
 
 }
 
