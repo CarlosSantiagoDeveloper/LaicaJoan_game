@@ -1,9 +1,9 @@
 // === PLAYER INPUT ===
-var right = keyboard_check(ord("D"))
-var left = keyboard_check(ord("A"))
+var right = keyboard_check(ord("D")) || keyboard_check(vk_right)
+var left = keyboard_check(ord("A")) || keyboard_check(vk_left)
 var up = keyboard_check(ord("W")) || keyboard_check(vk_up)
-var down = keyboard_check(ord("S")) 
-
+var down = keyboard_check(ord("S"))  || keyboard_check(vk_down)
+var interact = keyboard_check_pressed(ord("E")) || keyboard_check_pressed(vk_space) 
 if(climb){
 var right = keyboard_check(ord("D")) || keyboard_check(ord("S"))
 var left = keyboard_check(ord("A")) || keyboard_check(ord("W"))
@@ -37,7 +37,7 @@ if(true){
 		obj_light.on = false;
 	}
 }
-// === JUMPING ===
+
 
 if(place_meeting(x + hsp, y+1, obj_stairs)&&down){
 	climb = true;
@@ -85,3 +85,10 @@ y += vsp;
 
 light.x = x
 light.y = y
+
+
+//Activate things-----------------------
+//Activate car
+if(place_meeting(x,y,obj_car)&&interact){
+	obj_car.active	= true;
+}
