@@ -3,7 +3,10 @@ var dist = point_distance(x, y, obj_player.x, obj_player.y);
 
 if (dist < range) {
     // Update direction toward player
+	move_speed = 5
     dir = point_direction(x, y, obj_player.x, obj_player.y);
+} else{
+	move_speed = 3
 }
 
 // Move in current direction

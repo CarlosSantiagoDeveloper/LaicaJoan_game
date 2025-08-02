@@ -1,4 +1,4 @@
 //visible = false;
-dir = 0;          // last known direction (angle)
+dir = irandom_range(0,360);          // last known direction (angle)
 move_speed = 3;   // movement speed
-range = 2000;      // detection range
+range = 600;      // detection range

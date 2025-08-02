@@ -10,8 +10,8 @@
   "name":"obj_haunt",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Ghost&Haunt",
+    "path":"folders/Objects/Ghost&Haunt.yy",
   },
   "parentObjectId":null,
   "persistent":false,
