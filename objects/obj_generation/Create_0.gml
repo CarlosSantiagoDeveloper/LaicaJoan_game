@@ -17,7 +17,7 @@ if (instance_number(obj_wall_area) > 0) {
 	for(var i=0;i<_area_num;i++){ //Returns areas to original position
 		_areas[i].x = _x[i];  
 	}
-    var rx, ry;
+    var rx, ry, range,nearest, distance;
 	//show_debug_message("Hi")
 	for(var i=0;i<_area_num;i++){ 
 		//show_debug_message("Hi")
@@ -26,12 +26,22 @@ if (instance_number(obj_wall_area) > 0) {
 				//show_debug_message("Hi")
 		        rx = irandom_range(_areas[i].bbox_left, _areas[i].bbox_right);
 		        ry = irandom_range(_areas[i].bbox_top, _areas[i].bbox_bottom);
-
-		        if (!place_meeting(rx, ry, obj_picture_frame)) {
-		            var pics = instance_create_layer(rx, ry, "Instances", obj_picture_frame);
+				range = 200
+				if(instance_exists(obj_picture_frame)){
+					nearest = instance_nearest(rx,ry,obj_picture_frame)
+					distance = point_distance(rx,ry,nearest.x,nearest.y)
+			        if (distance>range) {
+			            var pics = instance_create_layer(rx, ry, "Instances", obj_picture_frame);
+						pics.image_index = irandom_range(0,8)
 					
-		            break;
-		        }
+			            break;
+			        }
+				} else{
+					var pics = instance_create_layer(rx, ry, "Instances", obj_picture_frame);
+						pics.image_index = irandom_range(0,8)
+					
+			            break;
+				}
 		    }
 		}
 	}

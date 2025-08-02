@@ -36,8 +36,16 @@ switch (Haunt) {
 		imageSpeed = 1;
 		imageSound = 0.6;
 		image_blend = c_white
-		image_xscale = 1.5
-		image_yscale = 1.5
+		image_xscale = 1.7
+		image_yscale = 1.7
+		break;
+	case "SHRINK":
+		visible = true;
+		imageSpeed = 1;
+		imageSound = 0.6;
+		image_blend = c_white
+		image_xscale = 0.6
+		image_yscale = 0.6
 		break;
 	case "COLOR": 
 		visible = true;

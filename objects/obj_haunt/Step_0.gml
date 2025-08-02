@@ -3,7 +3,7 @@ if(alarm[0]==0){
 }
 
 if(alarm[0]<1){
-	alarm[0] = room_speed	
+	alarm[0] = room_speed/2 // Haunt Frenquency
 }
 
 if(haunt==8){

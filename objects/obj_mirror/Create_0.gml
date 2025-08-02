@@ -6,7 +6,7 @@ yscale = 1;
 xscale = -1;
 offset = 0;
 topSet = 0
-Haunt = "APPEAR"
+Haunt = "NEUTRAL"
 
 
 

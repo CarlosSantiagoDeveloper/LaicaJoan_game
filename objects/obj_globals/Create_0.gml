@@ -1,6 +1,6 @@
 randomize();
 //global.hauntable = array_create(0);
-
+global.hauntable = []
 global.flip = false;
 global.reverse = false;
 global.spd = false;
@@ -15,7 +15,7 @@ switch (global.ghost) {
 	case "Llorona":
 	global.spd = true;
 	global.reverse = true;
-	global.ability1 = "SPEED"
+	global.ability1 = "SHRINK"
 	global.ability2 = "REVERSE"
 	break
 	case "Chupacabra":
@@ -51,7 +51,7 @@ switch (global.ghost) {
 	case "Alien":
 	global.spd = true;
 	global.color = true;
-	global.ability1 = "SPEED"
+	global.ability1 = "SHRINK"
 	global.ability2 = "COLOR"
 	break
 	

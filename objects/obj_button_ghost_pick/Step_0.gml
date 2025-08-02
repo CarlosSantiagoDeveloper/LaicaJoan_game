@@ -1,0 +1,1 @@
+myGhost = array[image_index]

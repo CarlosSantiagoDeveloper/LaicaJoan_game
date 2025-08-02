@@ -14,7 +14,7 @@ if(obj_player.image_xscale>0){
 			sprite_width-25-widthSet,//width,
 			sprite_height-topSet,//height,
 		    x+115*(xscale)+xSet,                // x position
-		    y-320-offset ,   // reflected position (offset = distance to mirror line)
+		    y-320-offset-botSet ,   // reflected position (offset = distance to mirror line)
 		    -obj_player.image_xscale*xscale,               // x scale (normal)
 		    obj_player.image_yscale*yscale,              // y scale (flipped)
 		    color,          // color
@@ -31,7 +31,7 @@ if(obj_player.image_xscale>0){
 			sprite_width-25-widthSet,//width,
 			sprite_height-topSet,//height,
 		    x+115*(xscale)+xSet,                // x position
-		    y-320-offset ,   // reflected position (offset = distance to mirror line)
+		    y-320-offset-botSet ,   // reflected position (offset = distance to mirror line)
 		    obj_player.image_xscale*xscale,               // x scale (normal)
 		    obj_player.image_yscale*yscale,              // y scale (flipped)
 		    color,          // color
