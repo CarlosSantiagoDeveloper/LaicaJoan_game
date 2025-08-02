@@ -1,14 +1,26 @@
-move_speed = 4;
-jump_speed = -20;
+image_speed = 0;
+//Speed
+normal_speed = 4;
+move_speed = normal_speed;
+sprint_speed = 6;
+max_stamina = 100;
+stamina = max_stamina;
+tired = false
+move = 0;
+//Gravity
 grav = 0.5;
 max_fall = 8;
+
+//Move
 vsp = 0;
 hsp = 0
-//Light_source
+
 stairs = false;
 climb = 0;
 final = noone;
 start = noone;
 dir = 0;
-light = instance_create_layer(x,y,"Darkness",obj_light)
+
+//Light_source
+light = instance_create_layer(x-10,y-280,"Darkness",obj_light)
 

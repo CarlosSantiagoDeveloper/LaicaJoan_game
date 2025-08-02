@@ -10,8 +10,8 @@
   "name":"obj_picture_frame",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Things",
+    "path":"folders/Objects/Things.yy",
   },
   "parentObjectId":null,
   "persistent":false,

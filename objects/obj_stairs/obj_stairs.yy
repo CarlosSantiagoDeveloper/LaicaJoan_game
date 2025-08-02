@@ -9,8 +9,8 @@
   "name":"obj_stairs",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Stairs&Collision",
+    "path":"folders/Objects/Stairs&Collision.yy",
   },
   "parentObjectId":null,
   "persistent":false,
