@@ -1,3 +1,4 @@
+if (global.paused) exit;
 if(!Haunting){
 	if(instance_exists(obj_enemy_spawner)){
 		instance_destroy(obj_enemy_spawner)
@@ -12,7 +13,6 @@ if(!Haunting){
 		Haunting = true;	
 	}
 }else{
-	
 	if(alarm[1]==-1){
 		alarm[1] = 	HauntingTimer
 	}

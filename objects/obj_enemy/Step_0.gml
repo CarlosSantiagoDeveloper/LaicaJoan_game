@@ -1,5 +1,5 @@
 // === Calculate distance to player ===
-
+if (global.paused) exit;
 var dist = point_distance(x, y, obj_player.x, obj_player.y);
 
 if (dist < range&&!obj_player.hiding) {

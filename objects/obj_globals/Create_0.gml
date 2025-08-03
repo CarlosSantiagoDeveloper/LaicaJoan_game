@@ -1,6 +1,7 @@
 randomize();
 //global.hauntable = array_create(0);
 global.hauntable = []
+global.paused = false;
 global.index_enemy = irandom_range(0,2)
 global.flip = false;
 global.reverse = false;

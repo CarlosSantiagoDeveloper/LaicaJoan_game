@@ -1,4 +1,5 @@
 // === PLAYER INPUT ===
+if (global.paused) exit;
 	 interact = keyboard_check_pressed(ord("E")) || keyboard_check_pressed(vk_space) 
 	 right = keyboard_check(ord("D")) || keyboard_check(vk_right)
 	 left = keyboard_check(ord("A")) || keyboard_check(vk_left)

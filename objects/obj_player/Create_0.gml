@@ -46,3 +46,11 @@ light = instance_create_layer(x-10,y-280,"Darkness",obj_light)
 sprHidden = sprite_index;
 sprOri = sprite_index;
 
+interact = 0;
+right = 0
+	 left = 0
+	 up = 0
+	 down = 0
+
+	 sprint = 0
+

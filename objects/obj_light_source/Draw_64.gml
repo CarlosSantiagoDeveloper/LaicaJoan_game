@@ -35,10 +35,10 @@ if(instance_exists(obj_player)){
 	if(instance_exists(obj_light)&&obj_light.on){
 		var cam_x = camera_get_view_x(view_camera[0]);
 	    var cam_y = camera_get_view_y(view_camera[0]);
-		lightSource(obj_light,ray_count,light_radius,dir,angle)
+		//lightSource(obj_light,ray_count,light_radius,dir,angle)
 		var rad = 25 + random_range(0, 0.5);
 		for(var i = 0;i<6;i++){
-			draw_circle(obj_light.x-cam_x,obj_light.y-cam_y,rad*i,0)
+			//draw_circle(obj_light.x-cam_x,obj_light.y-cam_y,rad*i,0)
 		}
 	
 	}
