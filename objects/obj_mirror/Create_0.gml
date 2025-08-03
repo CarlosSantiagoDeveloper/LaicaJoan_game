@@ -7,7 +7,7 @@ xscale = -1;
 offset = 0;
 topSet = 0
 botSet = 0
-Haunt = "GROW"
+Haunt = "NEUTRAL"
 depth = -y
 
 

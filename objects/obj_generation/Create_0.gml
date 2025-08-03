@@ -22,7 +22,7 @@ if (instance_number(obj_wall_area) > 0) {
 	for(var i=0;i<_area_num;i++){ 
 		//show_debug_message("Hi")
 		repeat (wall_number) {
-		    repeat (10) {
+		    repeat (50) {
 				//show_debug_message("Hi")
 		        rx = irandom_range(_areas[i].bbox_left, _areas[i].bbox_right);
 		        ry = irandom_range(_areas[i].bbox_top, _areas[i].bbox_bottom);
@@ -73,9 +73,9 @@ if (instance_number(obj_floor_area) > 0) {
 		        rx = irandom_range(_areas[i].bbox_left, _areas[i].bbox_right);
 		        ry = irandom_range(_areas[i].bbox_top, _areas[i].bbox_bottom);
 
-		        if (!place_meeting(rx, ry, obj_car)) {
-		            var pics = instance_create_layer(rx, ry, "Instances", obj_car);
-					
+		        if (!place_meeting(rx, ry, obj_floor_furniture)) {
+		            var pics = instance_create_layer(rx, ry, "Instances", obj_floor_furniture);
+					pics.image_index = irandom_range(0,pics.image_number)
 		            break;
 		        }
 		    }

@@ -11,8 +11,8 @@
   "name":"obj_car",
   "overriddenProperties":[],
   "parent":{
-    "name":"Things",
-    "path":"folders/Objects/Things.yy",
+    "name":"group1",
+    "path":"folders/Objects/Things/group1.yy",
   },
   "parentObjectId":null,
   "persistent":false,

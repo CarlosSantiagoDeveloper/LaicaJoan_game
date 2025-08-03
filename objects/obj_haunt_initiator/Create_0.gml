@@ -1,3 +1,3 @@
-HuntTimer = room_speed*10
+HuntTimer = room_speed*1
 Haunting = false
-HauntingTimer = room_speed*10
+HauntingTimer = room_speed*30

@@ -11,8 +11,8 @@
   "name":"obj_table",
   "overriddenProperties":[],
   "parent":{
-    "name":"Work today",
-    "path":"folders/Objects/Work today.yy",
+    "name":"Hiding",
+    "path":"folders/Objects/Things/Hiding.yy",
   },
   "parentObjectId":null,
   "persistent":false,

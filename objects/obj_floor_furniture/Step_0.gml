@@ -8,61 +8,37 @@ switch (Haunt) {
 		//imageSound = 1
 		break;
 	case "FLIP": 
-		visible = true;
+
 		image_yscale = -1;
-		imageSpeed = 0;
-		imageSound = 0;
-		image_blend = c_white
-		image_xscale = 1;
+
 		break;
-	case "REVERSE":
-		visible = true;
-		imageSpeed = - 1;
-		imageSound = 1
-		image_blend = c_white
-		image_xscale = -1;
-		image_yscale = 1;
+	case "VANDALIZE":
+
+		sprite_index =  spr_book_shelf_vandilize
 		break;
-	case "SPEED":
-		visible = true;
-		imageSpeed = 1.2;
-		imageSound = 1.2
-		image_blend = c_white
-		image_xscale = 1;
-		image_yscale = 1;
-		break;
+
 	case "GROW":
-		visible = true;
-		imageSpeed = 1;
-		imageSound = 0.6;
-		image_blend = c_white
-		image_xscale = 1.7
-		image_yscale = 1.7
+
+		yoffset = -40
+		image_xscale = 1.2
+		image_yscale = 1.2
 		break;
 	case "SHRINK":
-		visible = true;
-		imageSpeed = 1;
-		imageSound = 0.6;
-		image_blend = c_white
-		image_xscale = 0.6
-		image_yscale = 0.6
+
+		yoffset = 135
+		image_xscale = 0.5
+		image_yscale = 0.5
 		break;
 	case "COLOR": 
-		visible = true;
-		imageSpeed = 1;
-		imageSound = 1;
-		image_blend = c_red
-		image_xscale = 1
-		image_yscale = 1
+
+		image_blend = c_aqua
+		image_alpha = 0.5
+
 		break;
 		
-	case "APPEAR":
-		visible = false;
-		imageSpeed = -1; // dudoso
-		imageSound = -1;
-		image_blend = c_white
-		image_xscale = 1;
-		image_yscale = 1;
+	case "VANISH":
+
+		sprite_index = spr_book_shelf_vanish
 		break;
 	
 }	
