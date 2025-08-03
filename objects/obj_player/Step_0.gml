@@ -138,7 +138,9 @@ if(place_meeting(x,y,obj_bed)&&interact){
 		ysleep = bed.y+100
 		depthsleep = bed.depth+1
 		sleeping = true;
-		sprHidden = spr_player_crounch
+		sprHidden = spr_player_crouch
+		image_alpha = 0;
+		beds = true;
 	
 }
 //=============Hidding========================
@@ -147,11 +149,11 @@ if(place_meeting(x,y,obj_table)&&interact){
 	var tab = instance_nearest(x,y,obj_table)
 	if(!tab.refreshing){
 		tab.active	= true;
-		xhide = tab.x-50
-		yhide = tab.y+100
+		xhide = tab.x-20
+		yhide = tab.y+120
 		depthhide = tab.depth+1
 		hiding = true;
-		sprHidden = spr_player_crounch
+		sprHidden = spr_player_crouch
 	}
 	
 }
@@ -160,14 +162,30 @@ if(place_meeting(x,y,obj_closet)&&interact){
 	var clo = instance_nearest(x,y,obj_closet)
 	if(!clo.refreshing){
 		clo.active	= true;
-		xhide = clo.x
-		yhide = clo.y
+		xhide = clo.x+50
+		yhide = clo.y+30
 		depthhide = clo.depth+1
 		hiding = true;
 		sprHidden = spr_player
+		image_alpha = 0;
 	}
 	
 }
+//Activate Trunk
+if(place_meeting(x,y,obj_trunk)&&interact){
+	var clo = instance_nearest(x,y,obj_trunk)
+	if(!clo.refreshing){
+		clo.active	= true;
+		xhide = clo.x+200
+		yhide = clo.y+380
+		depthhide = clo.depth+1
+		hiding = true;
+		sprHidden = spr_player
+		image_alpha = 0;
+	}
+	
+}
+
 
 //======Animation===============================================
 if(move!=0&&!hiding){
@@ -177,10 +195,12 @@ if(move!=0&&!hiding){
 	image_index = 0
 	image_speed = 0	
 }
-if(hiding){
+if(hiding||sleeping){
+	
 	image_xscale = 1
 	sprite_index = sprHidden;	
 } else{
+	image_alpha = 1
 	sprite_index = sprOri
 }
 //=======Hidden Logic=============
@@ -216,6 +236,6 @@ else{
 	depth = ogiDepth
 }
 //========================
-
+depth = -y
 
 

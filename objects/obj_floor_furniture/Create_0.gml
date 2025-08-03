@@ -6,5 +6,5 @@ array_push(global.hauntable, id);
 
 Haunt = "NEUTRAL"
 
-depth = 100
+depth = -y
 image_speed = 0;

@@ -14,6 +14,7 @@ hiding = false;
 xhide = 0;
 yhide = 0;
 depthhide = 0;
+depth = -y
 ogiDepth = depth
 orix = 0
 oriy = 0

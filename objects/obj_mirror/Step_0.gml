@@ -56,7 +56,7 @@ if(Haunt=="FLIP"){
 }
 
 if(Haunt=="GROW"){
-	botSet = 0;
+	topSet = 70;
 	widthSet = 40
 	xSet = 25;
 	

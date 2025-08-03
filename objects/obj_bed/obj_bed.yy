@@ -10,8 +10,8 @@
   "name":"obj_bed",
   "overriddenProperties":[],
   "parent":{
-    "name":"Work today",
-    "path":"folders/Objects/Work today.yy",
+    "name":"bed",
+    "path":"folders/Objects/bed.yy",
   },
   "parentObjectId":null,
   "persistent":false,

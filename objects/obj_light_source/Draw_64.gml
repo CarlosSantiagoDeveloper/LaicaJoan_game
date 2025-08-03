@@ -6,13 +6,19 @@ surface_set_target(dark_surf);
 draw_clear_alpha(c_black, 0); // clear fully
 
 // === Full black overlay ===
+if(!obj_haunt_initiator.Haunting){
 draw_set_alpha(0.8);
+} else{
+draw_set_alpha(0.9);
+}
 draw_set_color(c_black);
 draw_rectangle(0, 0, room_width, room_height, false);
 
 // === Begin light subtraction ===
 gpu_set_blendmode(bm_subtract);
-draw_set_alpha(0.4 + random_range(-0.02, 0.02));
+if(!obj_haunt_initiator.Haunting){
+draw_set_alpha(0.4 + random_range(-0.06, 0.06));
+} else draw_set_alpha(0.1 + random_range(-0.25, 0.25));
 draw_set_color(c_white); // white subtracts from black
 
 if(instance_exists(obj_light)&&obj_light.on){

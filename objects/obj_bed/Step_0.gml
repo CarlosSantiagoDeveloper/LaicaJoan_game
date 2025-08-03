@@ -1,7 +1,7 @@
 if(active){
 		image_index = 1;
 		if(!obj_player.sleeping){
-			obj_player.x = obj_player.orix
+			//obj_player.x = obj_player.orix
 			obj_player.y = obj_player.oriy
 		
 			active = false;	

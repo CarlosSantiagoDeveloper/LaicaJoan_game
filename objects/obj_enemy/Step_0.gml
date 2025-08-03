@@ -1,7 +1,7 @@
 // === Calculate distance to player ===
 var dist = point_distance(x, y, obj_player.x, obj_player.y);
 
-if (dist < range) {
+if (dist < range&&!obj_player.hiding) {
     // Update direction toward player
 	move_speed = 5
     dir = point_direction(x, y, obj_player.x, obj_player.y);

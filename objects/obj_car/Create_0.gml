@@ -4,7 +4,7 @@ imageSound = 1;
 active = false
 car_speed = -2;
 snd = 0
-
+depth =-y
 
 
 
