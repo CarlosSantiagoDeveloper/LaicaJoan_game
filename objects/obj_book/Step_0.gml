@@ -3,7 +3,7 @@ var pause = keyboard_check_pressed(vk_enter)||keyboard_check_pressed(vk_escape)
 if(pause){
 	if(!instance_exists(obj_book_empty)){
 		instance_deactivate_all(1)
-		instance_activate_layer("Darkness")
+		//instance_activate_layer("Darkness")
 		var cam_x = camera_get_view_x(view_camera[0]);
 		var cam_y = camera_get_view_y(view_camera[0]);
 		var cam_w = camera_get_view_width(view_camera[0]);

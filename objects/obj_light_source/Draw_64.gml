@@ -6,11 +6,11 @@ surface_set_target(dark_surf);
 draw_clear_alpha(c_black, 0); // clear fully
 
 // === Full black overlay ===
-if(instance_exists(obj_haunt_initiator)){
-	if(!obj_haunt_initiator.Haunting){
+if(instance_exists(obj_haunt_initiator_nightmare_1)){
+	if(!obj_haunt_initiator_nightmare_1.Haunting){
 	draw_set_alpha(0.8);
 	} else{
-	draw_set_alpha(0.9);
+	draw_set_alpha(0.8);
 	}
 } else{
 	draw_set_alpha(0.8);
@@ -20,8 +20,8 @@ draw_rectangle(0, 0, room_width, room_height, false);
 
 // === Begin light subtraction ===
 gpu_set_blendmode(bm_subtract);
-if(instance_exists(obj_haunt_initiator)){
-	if(!obj_haunt_initiator.Haunting){
+if(instance_exists(obj_haunt_initiator_nightmare_1)){
+	if(!obj_haunt_initiator_nightmare_1.Haunting){
 		draw_set_alpha(0.4 + random_range(-0.06, 0.06));
 	} else {
 		draw_set_alpha(0.1 + random_range(-0.25, 0.25));

@@ -1,5 +1,13 @@
 if(myGhost==global.ghost){
-	room_goto(Room_Nightmare_1)
+	start_transition(function() {
+	
+    room_goto_next();
+	
+});
 } else{
-	game_end();
+	start_transition(function() {
+	
+    room_goto(Room_Nightmare_1);
+	
+});
 }

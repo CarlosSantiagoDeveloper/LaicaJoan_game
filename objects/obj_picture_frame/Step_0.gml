@@ -26,8 +26,8 @@ switch (Haunt) {
 	case "SHRINK":
 
 
-		image_xscale = 0.6
-		image_yscale = 0.6
+		image_xscale = 0.3
+		image_yscale = 0.3
 		break;
 	case "COLOR": 
 

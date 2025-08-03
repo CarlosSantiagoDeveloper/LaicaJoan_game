@@ -1,0 +1,1 @@
+corner = spr_book_corner_empty

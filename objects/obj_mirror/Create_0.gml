@@ -9,6 +9,7 @@ topSet = 0
 botSet = 0
 Haunt = "NEUTRAL"
 depth = -y
+sprite = obj_player.sprite_index
 
 
 

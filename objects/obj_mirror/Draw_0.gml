@@ -7,7 +7,7 @@ var dist = x-obj_player.x
 if(obj_player.image_xscale>0){
 	
 		draw_sprite_part_ext(
-		    obj_player.sprite_index,     // sprite
+		    sprite,     // sprite
 		    obj_player.image_index,      // frame
 			dist,//left,
 			0,//top,
@@ -24,7 +24,7 @@ if(obj_player.image_xscale>0){
 } else{
 		
 		draw_sprite_part_ext(
-		    obj_player.sprite_index,     // sprite
+		    sprite,     // sprite
 		    obj_player.image_index,      // frame
 			dist,//left,
 			0,//top,
