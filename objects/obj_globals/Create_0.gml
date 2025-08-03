@@ -1,6 +1,8 @@
 randomize();
 //global.hauntable = array_create(0);
 global.hauntable = []
+global.paused = false;
+global.index_enemy = irandom_range(0,2)
 global.flip = false;
 global.reverse = false;
 global.spd = false;
@@ -8,7 +10,7 @@ global.disappear = false;
 global.color = false;
 global.size = false;
 
-global.ghost = choose("Llorona","Chupacabra","Diablo","Indio","Cuco","Gargola","Alien")
+global.ghost = choose("Llorona","Chupacabra","Diablo","Vampiro","Cuco","Gargola","Duende")
 global.ability1 = "NEUTRAL"
 global.ability2 = "NEUTRAL"
 switch (global.ghost) {
@@ -30,7 +32,7 @@ switch (global.ghost) {
 	global.ability1 = "FLIP"
 	global.ability2 = "VANDALIZE"
 	break
-	case "Indio":
+	case "Vampiro":
 	global.disappear = true;
 	global.flip = true;
 	global.ability1 = "FLIP"
@@ -48,7 +50,7 @@ switch (global.ghost) {
 	global.ability1 = "GROW"
 	global.ability2 = "VANDALIZE"
 	break
-	case "Alien":
+	case "Duende":
 	global.spd = true;
 	global.color = true;
 	global.ability1 = "SHRINK"

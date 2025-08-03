@@ -15,6 +15,7 @@ switch (Haunt) {
 		color = c_white
 		xscale = -1;
 		yscale = 1;
+		sprite = spr_player_vandal
 		break;
 	case "GROW":
 		alpha = 0.5;

@@ -1,4 +1,5 @@
 // === PLAYER INPUT ===
+if (global.paused) exit;
 	 interact = keyboard_check_pressed(ord("E")) || keyboard_check_pressed(vk_space) 
 	 right = keyboard_check(ord("D")) || keyboard_check(vk_right)
 	 left = keyboard_check(ord("A")) || keyboard_check(vk_left)
@@ -6,10 +7,7 @@
 	 down = keyboard_check(ord("S"))  || keyboard_check(vk_down)
 
 	 sprint = keyboard_check(vk_shift);
-	if(climb){
-	 right = keyboard_check(ord("D")) || keyboard_check(ord("S"))
-	 left = keyboard_check(ord("A")) || keyboard_check(ord("W"))
-	}
+	
 
 
 
@@ -70,10 +68,10 @@ if(true){
 }
 
 //============Climbing Stairs==========
-if(place_meeting(x + hsp, y+1, obj_stair_collision)&&down){
+if(place_meeting(x + hsp, y+300, obj_stair_collision)&&down){
 	climb = true;
 }
-if (place_meeting(x + hsp, y, obj_stair_collision)&&up) {
+if (place_meeting(x + hsp, y+300, obj_stair_collision)&&up) {
 	climb = true;	
 }
     // Climbing up (moving right)
@@ -176,7 +174,7 @@ if(place_meeting(x,y,obj_trunk)&&interact){
 	var clo = instance_nearest(x,y,obj_trunk)
 	if(!clo.refreshing){
 		clo.active	= true;
-		xhide = clo.x+200
+		xhide = clo.x
 		yhide = clo.y+380
 		depthhide = clo.depth+1
 		hiding = true;
@@ -207,7 +205,7 @@ if(hiding||sleeping){
 if(hiding){
 	if(interact&&alarm[0]>-1) hiding = false
 	if(alarm[0]==-1) {
-		alarm[0]=room_speed*4; 
+		alarm[0]=room_speed*5; 
 		orix = x;
 		oriy = y;
 	}
