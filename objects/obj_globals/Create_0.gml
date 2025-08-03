@@ -16,7 +16,7 @@ switch (global.ghost) {
 	global.spd = true;
 	global.reverse = true;
 	global.ability1 = "SHRINK"
-	global.ability2 = "REVERSE"
+	global.ability2 = "VANDALIZE"
 	break
 	case "Chupacabra":
 	global.color = true;
@@ -28,25 +28,25 @@ switch (global.ghost) {
 	global.reverse = true;
 	global.flip = true;
 	global.ability1 = "FLIP"
-	global.ability2 = "REVERSE"
+	global.ability2 = "VANDALIZE"
 	break
 	case "Indio":
 	global.disappear = true;
 	global.flip = true;
 	global.ability1 = "FLIP"
-	global.ability2 = "APPEAR"
+	global.ability2 = "VANISH"
 	break
 	case "Cuco":
 	global.disappear = true;
 	global.size = true;
-	global.ability2 = "APPEAR"
+	global.ability2 = "VANISH"
 	global.ability1 = "GROW"
 	break
 	case "Gargola":
 	global.size = true;
 	global.reverse = true;
 	global.ability1 = "GROW"
-	global.ability2 = "REVERSE"
+	global.ability2 = "VANDALIZE"
 	break
 	case "Alien":
 	global.spd = true;

@@ -24,6 +24,7 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"98c55519-c92b-4a48-aaa8-9e3008cb2a39","blendMode":0,"displayName":"Layer 2","isLocked":false,"name":"98c55519-c92b-4a48-aaa8-9e3008cb2a39","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"33dc0c7e-b6f6-44e3-b5cf-59bab935f079","blendMode":0,"displayName":"default","isLocked":false,"name":"33dc0c7e-b6f6-44e3-b5cf-59bab935f079","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
+    {"$GMImageLayer":"","%Name":"52496be1-14c5-4899-b46c-22e9dbd1cfce","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"52496be1-14c5-4899-b46c-22e9dbd1cfce","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_player",
   "nineSlice":null,

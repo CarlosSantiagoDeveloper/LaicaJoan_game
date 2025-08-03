@@ -16,3 +16,10 @@ y += lengthdir_y(move_speed, dir);
 var pos = scr_loop(x,y);
 x = pos[0]
 y = pos[1]
+
+if(lengthdir_x(move_speed, dir)<0){
+	image_xscale = -1;	
+} else{
+		image_xscale = 1;	
+}
+image_alpha = 0.4 + random_range(-0.4,0.4)

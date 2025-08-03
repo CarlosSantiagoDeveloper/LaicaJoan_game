@@ -11,8 +11,8 @@
   "name":"obj_music_box",
   "overriddenProperties":[],
   "parent":{
-    "name":"Work today",
-    "path":"folders/Objects/Work today.yy",
+    "name":"group1",
+    "path":"folders/Objects/Things/group1.yy",
   },
   "parentObjectId":null,
   "persistent":false,

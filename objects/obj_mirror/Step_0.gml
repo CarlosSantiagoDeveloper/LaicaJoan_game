@@ -10,16 +10,10 @@ switch (Haunt) {
 		yscale = -1;
 		xscale = -1;
 		break;
-	case "REVERSE":
+	case "VANDALIZE":
 		alpha = 0.5;
 		color = c_white
-		xscale = 1;
-		yscale = 1;
-		break;
-	case "SPEED":
-		alpha = 0.5;
-		color = c_white
-		xscale = 1;
+		xscale = -1;
 		yscale = 1;
 		break;
 	case "GROW":
@@ -35,13 +29,13 @@ switch (Haunt) {
 		yscale = 0.8;
 		break;
 	case "COLOR": 
-		alpha = 0.5;
-		color = c_blue
+		alpha = 0.2;
+		color = c_aqua
 		xscale = -1;
 		yscale = 1;
 		break;
 		
-	case "APPEAR":
+	case "VANISH":
 		alpha = 0;
 		color = c_white
 		xscale = -1;
@@ -56,9 +50,10 @@ if(Haunt=="FLIP"){
 }
 
 if(Haunt=="GROW"){
-	topSet = 70;
+	topSet = 118;
 	widthSet = 40
 	xSet = 25;
+	
 	
 } else if(Haunt=="SHRINK"){
 	botSet =-70;

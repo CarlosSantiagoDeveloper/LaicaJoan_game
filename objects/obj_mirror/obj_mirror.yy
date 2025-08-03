@@ -11,8 +11,8 @@
   "name":"obj_mirror",
   "overriddenProperties":[],
   "parent":{
-    "name":"Work today",
-    "path":"folders/Objects/Work today.yy",
+    "name":"Things",
+    "path":"folders/Objects/Things.yy",
   },
   "parentObjectId":null,
   "persistent":false,
