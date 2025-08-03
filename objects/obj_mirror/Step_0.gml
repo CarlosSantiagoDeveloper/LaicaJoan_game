@@ -28,6 +28,12 @@ switch (Haunt) {
 		xscale = -1.2;
 		yscale = 1.2;
 		break;
+	case "SHRINK":
+		alpha = 0.5;
+		color = c_white
+		xscale = -0.8;
+		yscale = 0.8;
+		break;
 	case "COLOR": 
 		alpha = 0.5;
 		color = c_blue
@@ -50,11 +56,19 @@ if(Haunt=="FLIP"){
 }
 
 if(Haunt=="GROW"){
-	botSet = 115;
+	topSet = 70;
 	widthSet = 40
 	xSet = 25;
 	
-} else{
+} else if(Haunt=="SHRINK"){
+	botSet =-70;
+	widthSet = -55
+	xSet = -22;
+	
+}
+
+
+ else{
 	botSet = 0;
 	widthSet = 0
 	xSet = 0;

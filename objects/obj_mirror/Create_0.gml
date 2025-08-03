@@ -6,8 +6,9 @@ yscale = 1;
 xscale = -1;
 offset = 0;
 topSet = 0
-Haunt = "APPEAR"
-
+botSet = 0
+Haunt = "GROW"
+depth = -y
 
 
 

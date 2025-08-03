@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Controls",
-    "path":"folders/Objects/Controls.yy",
+    "path":"folders/Objects/Ghost&Haunt/Controls.yy",
   },
   "parentObjectId":null,
   "persistent":false,
